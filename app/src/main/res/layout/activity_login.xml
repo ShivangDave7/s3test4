@@ -173,7 +173,7 @@
             android:singleLine="true"
             android:text="@{loginVM.loginModel.txtForgotPassword}"
             style="@style/txtPoppinsbold12" tools:text="@string/msg_forgot_password"/>
-        <TextView android:clickable="true" android:ellipsize="end"
+        <TextView android:ellipsize="end"
             android:gravity="center_horizontal"
             android:id="@+id/txtConfirmation"
             android:layout_height="wrap_content"

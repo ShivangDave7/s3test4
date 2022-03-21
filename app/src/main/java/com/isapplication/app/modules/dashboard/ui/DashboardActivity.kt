@@ -123,7 +123,7 @@ public class DashboardActivity : BaseActivity<ActivityDashboardBinding>(R.layout
     item: Dashboard2RowModel
   ): Unit {
     when(view.id) {
-      R.id.linearProduct -> {
+      R.id.linearProduct ->  {
         val destIntent = ProductDetailActivity.getIntent(this, null)
         startActivity(destIntent)
       }

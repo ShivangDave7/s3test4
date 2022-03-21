@@ -4,12 +4,19 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.viewModels
+import androidx.appcompat.app.AlertDialog
+import com.google.android.material.snackbar.Snackbar
 import com.isapplication.app.R
 import com.isapplication.app.appcomponents.base.BaseActivity
 import com.isapplication.app.databinding.ActivityLoginBinding
-import com.isapplication.app.modules.dashboard.ui.DashboardActivity
+import com.isapplication.app.extensions.NoInternetConnection
+import com.isapplication.app.extensions.hideKeyboard
+import com.isapplication.app.extensions.showProgressDialog
 import com.isapplication.app.modules.login.`data`.viewmodel.LoginVM
-import com.isapplication.app.modules.registerform.ui.RegisterFormActivity
+import com.isapplication.app.network.models.createlogin.CreateLoginResponse
+import com.isapplication.app.network.resources.ErrorResponse
+import com.isapplication.app.network.resources.SuccessResponse
+import java.lang.Exception
 import kotlin.String
 import kotlin.Unit
 
@@ -22,13 +29,42 @@ public class LoginActivity : BaseActivity<ActivityLoginBinding>(R.layout.activit
   }
 
   public override fun setUpClicks(): Unit {
-    binding.txtConfirmation.setOnClickListener {
-      val destIntent = RegisterFormActivity.getIntent(this, null)
-      startActivity(destIntent)
-    }
     binding.btnSignIn.setOnClickListener {
-      val destIntent = DashboardActivity.getIntent(this, null)
-      startActivity(destIntent)
+      this@LoginActivity.hideKeyboard()
+      viewModel.onClickBtnSignIn()
+    }
+  }
+
+  public override fun addObservers(): Unit {
+    var progressDialog : AlertDialog? = null
+    viewModel.progressLiveData.observe(this@LoginActivity) {
+      if(it) {
+        progressDialog?.dismiss()
+        progressDialog = null
+        progressDialog = this@LoginActivity.showProgressDialog()
+      } else  {
+        progressDialog?.dismiss()
+      }
+    }
+    viewModel.createLoginLiveData.observe(this@LoginActivity) {
+      if(it is SuccessResponse) {
+        val response = it.getContentIfNotHandled()
+        onSuccessCreateLogin(it)
+      } else if(it is ErrorResponse)  {
+        onErrorCreateLogin(it.data ?:Exception())
+      }
+    }
+  }
+
+  private fun onSuccessCreateLogin(response: SuccessResponse<CreateLoginResponse>): Unit {
+    viewModel.bindCreateLoginResponse(response.data)
+  }
+
+  private fun onErrorCreateLogin(exception: Exception): Unit {
+    when(exception) {
+      is NoInternetConnection -> {
+        Snackbar.make(binding.root, exception.message?:"", Snackbar.LENGTH_LONG).show()
+      }
     }
   }
 

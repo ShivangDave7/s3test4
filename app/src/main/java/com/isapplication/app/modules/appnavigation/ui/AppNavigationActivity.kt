@@ -55,18 +55,6 @@ public class AppNavigationActivity :
   }
 
   public override fun setUpClicks(): Unit {
-    binding.linearCreditCardAndDebit.setOnClickListener {
-      val destIntent = CreditCardAndDebitActivity.getIntent(this, null)
-      startActivity(destIntent)
-    }
-    binding.linearSplashScreen.setOnClickListener {
-      val destIntent = SplashScreenActivity.getIntent(this, null)
-      startActivity(destIntent)
-    }
-    binding.linearChangePassword.setOnClickListener {
-      val destIntent = ChangePasswordActivity.getIntent(this, null)
-      startActivity(destIntent)
-    }
     binding.linearLailyfaFebrinaCard.setOnClickListener {
       val destIntent = LailyfaFebrinaCardActivity.getIntent(this, null)
       startActivity(destIntent)
@@ -75,52 +63,20 @@ public class AppNavigationActivity :
       val destIntent = AddPaymentActivity.getIntent(this, null)
       startActivity(destIntent)
     }
-    binding.linearExplore.setOnClickListener {
-      val destIntent = ExploreActivity.getIntent(this, null)
-      startActivity(destIntent)
-    }
-    binding.linearSearchResult1.setOnClickListener {
-      val destIntent = SearchResult2Activity.getIntent(this, null)
-      startActivity(destIntent)
-    }
-    binding.linearSuccessScreen.setOnClickListener {
-      val destIntent = SuccessScreenActivity.getIntent(this, null)
-      startActivity(destIntent)
-    }
-    binding.linearOrderDetails.setOnClickListener {
-      val destIntent = OrderDetailsActivity.getIntent(this, null)
-      startActivity(destIntent)
-    }
-    binding.linearAddAddress.setOnClickListener {
-      val destIntent = AddAddressActivity.getIntent(this, null)
-      startActivity(destIntent)
-    }
-    binding.linearAddress.setOnClickListener {
-      val destIntent = AddressActivity.getIntent(this, null)
-      startActivity(destIntent)
-    }
-    binding.linearReviewProduct.setOnClickListener {
-      val destIntent = ReviewProductActivity.getIntent(this, null)
+    binding.linearWriteReviewFill.setOnClickListener {
+      val destIntent = WriteReviewFillActivity.getIntent(this, null)
       startActivity(destIntent)
     }
     binding.linearRegisterForm.setOnClickListener {
       val destIntent = RegisterFormActivity.getIntent(this, null)
       startActivity(destIntent)
     }
-    binding.linearAddCard.setOnClickListener {
-      val destIntent = AddCardActivity.getIntent(this, null)
+    binding.linearFilter.setOnClickListener {
+      val destIntent = FilterActivity.getIntent(this, null)
       startActivity(destIntent)
     }
-    binding.linearNotification.setOnClickListener {
-      val destIntent = NotificationActivity.getIntent(this, null)
-      startActivity(destIntent)
-    }
-    binding.linearPaymentMethod.setOnClickListener {
-      val destIntent = PaymentMethodActivity.getIntent(this, null)
-      startActivity(destIntent)
-    }
-    binding.linearLogin.setOnClickListener {
-      val destIntent = LoginActivity.getIntent(this, null)
+    binding.linearAddress.setOnClickListener {
+      val destIntent = AddressActivity.getIntent(this, null)
       startActivity(destIntent)
     }
     binding.linearOfferScreen1.setOnClickListener {
@@ -131,76 +87,120 @@ public class AppNavigationActivity :
       val destIntent = OrderActivity.getIntent(this, null)
       startActivity(destIntent)
     }
-    binding.linearNotificationOffer.setOnClickListener {
-      val destIntent = NotificationOfferActivity.getIntent(this, null)
-      startActivity(destIntent)
-    }
-    binding.linearProfile.setOnClickListener {
-      val destIntent = ProfileActivity.getIntent(this, null)
-      startActivity(destIntent)
-    }
-    binding.linearProductDetail.setOnClickListener {
-      val destIntent = ProductDetailActivity.getIntent(this, null)
-      startActivity(destIntent)
-    }
-    binding.linearWriteReviewFill.setOnClickListener {
-      val destIntent = WriteReviewFillActivity.getIntent(this, null)
-      startActivity(destIntent)
-    }
-    binding.linearCart.setOnClickListener {
-      val destIntent = CartActivity.getIntent(this, null)
-      startActivity(destIntent)
-    }
     binding.linearSearchResult.setOnClickListener {
       val destIntent = SearchResultActivity.getIntent(this, null)
       startActivity(destIntent)
     }
-    binding.linearFilter.setOnClickListener {
-      val destIntent = FilterActivity.getIntent(this, null)
+    binding.linearOrderDetails.setOnClickListener {
+      val destIntent = OrderDetailsActivity.getIntent(this, null)
       startActivity(destIntent)
     }
-    binding.linearAccount.setOnClickListener {
-      val destIntent = AccountActivity.getIntent(this, null)
+    binding.linearExplore.setOnClickListener {
+      val destIntent = ExploreActivity.getIntent(this, null)
       startActivity(destIntent)
     }
-    binding.linearDashboard.setOnClickListener {
-      val destIntent = DashboardActivity.getIntent(this, null)
+    binding.linearLogin.setOnClickListener {
+      val destIntent = LoginActivity.getIntent(this, null)
       startActivity(destIntent)
     }
-    binding.linearShipTo.setOnClickListener {
-      val destIntent = ShipToActivity.getIntent(this, null)
-      startActivity(destIntent)
-    }
-    binding.linearShortBy.setOnClickListener {
-      val destIntent = ShortByActivity.getIntent(this, null)
+    binding.linearChooseCreditOrDebitCard.setOnClickListener {
+      val destIntent = ChooseCreditOrDebitCardActivity.getIntent(this, null)
       startActivity(destIntent)
     }
     binding.linearNotification1.setOnClickListener {
       val destIntent = Notification1Activity.getIntent(this, null)
       startActivity(destIntent)
     }
-    binding.linearNotificationFeed.setOnClickListener {
-      val destIntent = NotificationFeedActivity.getIntent(this, null)
+    binding.linearSearchResult1.setOnClickListener {
+      val destIntent = SearchResult2Activity.getIntent(this, null)
+      startActivity(destIntent)
+    }
+    binding.linearAddCard.setOnClickListener {
+      val destIntent = AddCardActivity.getIntent(this, null)
+      startActivity(destIntent)
+    }
+    binding.linearShipTo.setOnClickListener {
+      val destIntent = ShipToActivity.getIntent(this, null)
+      startActivity(destIntent)
+    }
+    binding.linearPaymentMethod.setOnClickListener {
+      val destIntent = PaymentMethodActivity.getIntent(this, null)
       startActivity(destIntent)
     }
     binding.linearListCategory.setOnClickListener {
       val destIntent = ListCategoryActivity.getIntent(this, null)
       startActivity(destIntent)
     }
-    binding.linearSearch.setOnClickListener {
-      val destIntent = SearchActivity.getIntent(this, null)
+    binding.linearSplashScreen.setOnClickListener {
+      val destIntent = SplashScreenActivity.getIntent(this, null)
+      startActivity(destIntent)
+    }
+    binding.linearNotification.setOnClickListener {
+      val destIntent = NotificationActivity.getIntent(this, null)
+      startActivity(destIntent)
+    }
+    binding.linearCreditCardAndDebit.setOnClickListener {
+      val destIntent = CreditCardAndDebitActivity.getIntent(this, null)
+      startActivity(destIntent)
+    }
+    binding.linearDashboard.setOnClickListener {
+      val destIntent = DashboardActivity.getIntent(this, null)
+      startActivity(destIntent)
+    }
+    binding.linearNotificationFeed.setOnClickListener {
+      val destIntent = NotificationFeedActivity.getIntent(this, null)
+      startActivity(destIntent)
+    }
+    binding.linearSuccessScreen.setOnClickListener {
+      val destIntent = SuccessScreenActivity.getIntent(this, null)
+      startActivity(destIntent)
+    }
+    binding.linearProfile.setOnClickListener {
+      val destIntent = ProfileActivity.getIntent(this, null)
       startActivity(destIntent)
     }
     binding.linearFavoriteProduct.setOnClickListener {
       val destIntent = FavoriteProductActivity.getIntent(this, null)
       startActivity(destIntent)
     }
+    binding.linearChangePassword.setOnClickListener {
+      val destIntent = ChangePasswordActivity.getIntent(this, null)
+      startActivity(destIntent)
+    }
+    binding.linearAddAddress.setOnClickListener {
+      val destIntent = AddAddressActivity.getIntent(this, null)
+      startActivity(destIntent)
+    }
+    binding.linearReviewProduct.setOnClickListener {
+      val destIntent = ReviewProductActivity.getIntent(this, null)
+      startActivity(destIntent)
+    }
+    binding.linearCart.setOnClickListener {
+      val destIntent = CartActivity.getIntent(this, null)
+      startActivity(destIntent)
+    }
+    binding.linearSearch.setOnClickListener {
+      val destIntent = SearchActivity.getIntent(this, null)
+      startActivity(destIntent)
+    }
+    binding.linearNotificationOffer.setOnClickListener {
+      val destIntent = NotificationOfferActivity.getIntent(this, null)
+      startActivity(destIntent)
+    }
+    binding.linearAccount.setOnClickListener {
+      val destIntent = AccountActivity.getIntent(this, null)
+      startActivity(destIntent)
+    }
+    binding.linearShortBy.setOnClickListener {
+      val destIntent = ShortByActivity.getIntent(this, null)
+      startActivity(destIntent)
+    }
     binding.linearOfferScreen.setOnClickListener {
       val destIntent = OfferScreenActivity.getIntent(this, null)
       startActivity(destIntent)
     }
-    binding.linearChooseCreditOrDebitCard.setOnClickListener {
-      val destIntent = ChooseCreditOrDebitCardActivity.getIntent(this, null)
+    binding.linearProductDetail.setOnClickListener {
+      val destIntent = ProductDetailActivity.getIntent(this, null)
       startActivity(destIntent)
     }
   }
