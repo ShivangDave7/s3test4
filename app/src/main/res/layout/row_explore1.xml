@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="explore1RowModel" type="com.isapplication.app.modules.explore.data.model.Explore1RowModel"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearManShirt"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <ImageView android:id="@+id/imageManShirtIcon"
+            android:layout_height="@dimen/_70pxh"
+            android:layout_width="@dimen/_70pxh"
+            android:scaleType="fitXY" android:src="@drawable/img_manshirticon"/>
+        <TextView android:id="@+id/txtManShirt"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8pxv"
+            android:layout_width="match_parent"
+            android:text="@{explore1RowModel.txtManShirt}"
+            style="@style/txtPoppinsregular10" tools:text="@string/lbl_man_shirt"/>
+    </LinearLayout>
+</layout>

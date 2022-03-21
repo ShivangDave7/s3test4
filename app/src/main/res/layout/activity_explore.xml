@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="exploreVM" type="com.isapplication.app.modules.explore.data.viewmodel.ExploreVM"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearExplore"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearGroup251" android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_16pxv"
+            android:layout_weight="1.0"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <androidx.appcompat.widget.Toolbar android:gravity="start"
+                android:id="@+id/toolbarToolbar"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" app:contentInsetStart="0dp">
+                <LinearLayout android:id="@+id/linearGroup247"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/_16pxh"
+                    android:layout_marginStart="@dimen/_16pxh"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <EditText
+                        android:background="@drawable/rectangle_border_blue_50_radius_5"
+                        android:drawablePadding="@dimen/_10pxh"
+                        android:drawableStart="@drawable/img_searchicon"
+                        android:ellipsize="end"
+                        android:hint="@string/lbl_search_product"
+                        android:id="@+id/etGroup37"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.85"
+                        android:layout_width="0dp"
+                        android:paddingBottom="@dimen/_19pxv"
+                        android:paddingStart="@dimen/_16pxh"
+                        android:paddingTop="@dimen/_19pxv"
+                        android:singleLine="true"
+                        android:text="@={exploreVM.exploreModel.etGroup37Value}"
+                        android:textColorHint="@color/bluegray_300" style="@style/etRoundedOutline"/>
+                    <ImageView android:id="@+id/imageLoveicon"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_marginBottom="@dimen/_11pxv"
+                        android:layout_marginStart="@dimen/_16pxh"
+                        android:layout_marginTop="@dimen/_11pxv"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY" android:src="@drawable/img_loveicon"/>
+                    <FrameLayout android:id="@+id/frameGroup254"
+                        android:layout_height="@dimen/_24pxv"
+                        android:layout_marginBottom="@dimen/_11pxv"
+                        android:layout_marginStart="@dimen/_16pxh"
+                        android:layout_marginTop="@dimen/_11pxv" android:layout_width="@dimen/_24pxh">
+                        <ImageView android:clickable="true"
+                            android:id="@+id/imageNotificationic"
+                            android:layout_gravity="start"
+                            android:layout_height="@dimen/_24pxh"
+                            android:layout_width="@dimen/_24pxh"
+                            android:scaleType="fitXY" android:src="@drawable/img_notificationic_2"/>
+                        <ImageView android:id="@+id/imageNotificationin"
+                            android:layout_gravity="top|end"
+                            android:layout_height="@dimen/_8pxh"
+                            android:layout_marginBottom="@dimen/_10pxv"
+                            android:layout_marginEnd="@dimen/_2pxh"
+                            android:layout_marginStart="@dimen/_10pxh"
+                            android:layout_width="@dimen/_8pxh"
+                            android:scaleType="fitXY" android:src="@drawable/img_notificationin"/>
+                    </FrameLayout>
+                </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtManFashion"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_16pxh"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_32pxv"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{exploreVM.exploreModel.txtManFashion}"
+                style="@style/txtPoppinsbold14_2" tools:text="@string/lbl_man_fashion"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:gravity="center_horizontal"
+                android:id="@+id/recyclerGroup255"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_16pxh"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_12pxv"
+                android:layout_width="match_parent"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="4" itemSpace="@{@dimen/_21pxh}"
+                tools:itemCount="6" tools:listitem="@layout/row_explore1"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtWomanFashion"
+                android:layout_gravity="start"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_16pxh"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_24pxv"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@{exploreVM.exploreModel.txtWomanFashion}"
+                style="@style/txtPoppinsbold14_2" tools:text="@string/lbl_woman_fashion"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:gravity="center_horizontal"
+                android:id="@+id/recyclerGroup256"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_16pxh"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_12pxv"
+                android:layout_width="match_parent"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="4" itemSpace="@{@dimen/_21pxh}"
+                tools:itemCount="7" tools:listitem="@layout/row_explore2"/>
+        </LinearLayout>
+        <FrameLayout android:id="@+id/frameBottomBar"
+            android:layout_height="wrap_content" android:layout_width="match_parent">
+            <LinearLayout android:id="@+id/linearGroup43"
+                android:layout_gravity="start"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/_24pxv"
+                android:layout_marginTop="@dimen/_24pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <LinearLayout android:gravity="center_horizontal"
+                    android:id="@+id/linearGroup38"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:layout_width="0dp" android:orientation="vertical">
+                    <ImageView android:id="@+id/imageHomeicon"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_marginEnd="@dimen/_25pxh"
+                        android:layout_marginStart="@dimen/_26pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY" android:src="@drawable/img_homeicon_1"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="start"
+                        android:id="@+id/txtHome"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4pxv"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{exploreVM.exploreModel.txtHome}"
+                        style="@style/txtPoppinsregular10" tools:text="@string/lbl_home"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_horizontal"
+                    android:id="@+id/linearGroup39"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:layout_width="0dp" android:orientation="vertical">
+                    <ImageView android:id="@+id/imageSearchicon"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_marginEnd="@dimen/_25pxh"
+                        android:layout_marginStart="@dimen/_26pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY" android:src="@drawable/img_searchicon_2"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="start"
+                        android:id="@+id/txtExplore"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4pxv"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{exploreVM.exploreModel.txtExplore}"
+                        style="@style/txtPoppinsbold10_1" tools:text="@string/lbl_explore"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_horizontal"
+                    android:id="@+id/linearGroup40"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:layout_width="0dp" android:orientation="vertical">
+                    <ImageView android:id="@+id/imageCarticon"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_marginEnd="@dimen/_25pxh"
+                        android:layout_marginStart="@dimen/_26pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY" android:src="@drawable/img_carticon_1"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="start"
+                        android:id="@+id/txtCart"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4pxv"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{exploreVM.exploreModel.txtCart}"
+                        style="@style/txtPoppinsregular10" tools:text="@string/lbl_cart"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_horizontal"
+                    android:id="@+id/linearGroup41"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:layout_width="0dp" android:orientation="vertical">
+                    <ImageView android:id="@+id/imageOffericon"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_marginEnd="@dimen/_25pxh"
+                        android:layout_marginStart="@dimen/_26pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY" android:src="@drawable/img_offericon_2"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="start"
+                        android:id="@+id/txtOffer"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4pxv"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{exploreVM.exploreModel.txtOffer}"
+                        style="@style/txtPoppinsregular10" tools:text="@string/lbl_offer"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_horizontal"
+                    android:id="@+id/linearGroup42"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:layout_width="0dp" android:orientation="vertical">
+                    <ImageView android:id="@+id/imageUsericon"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_marginEnd="@dimen/_25pxh"
+                        android:layout_marginStart="@dimen/_26pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY" android:src="@drawable/img_usericon_2"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="start"
+                        android:id="@+id/txtAccount"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4pxv"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{exploreVM.exploreModel.txtAccount}"
+                        style="@style/txtPoppinsregular10" tools:text="@string/lbl_account"/>
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</layout>

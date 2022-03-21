@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="offerScreenVM" type="com.isapplication.app.modules.offerscreen.data.viewmodel.OfferScreenVM"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearGroup160"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarToolbar"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_26pxv"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:id="@+id/linearGroup145"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/_16pxh"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <LinearLayout android:id="@+id/linearGroup162"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.88"
+                    android:layout_width="0dp" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageLefticon"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY" android:src="@drawable/img_lefticon"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtSuperFlashSal"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_12pxh"
+                        android:layout_weight="0.86"
+                        android:layout_width="0dp"
+                        android:singleLine="true"
+                        android:text="@{offerScreenVM.offerScreenModel.txtSuperFlashSal}"
+                        style="@style/txtPoppinsbold16" tools:text="@string/msg_super_flash_sal2"/>
+                </LinearLayout>
+                <ImageView android:clickable="true"
+                    android:id="@+id/imageSearchicon"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_marginStart="@dimen/_141pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY" android:src="@drawable/img_searchicon_1"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <androidx.core.widget.NestedScrollView
+            android:clipToPadding="false" android:fillViewport="true"
+            android:id="@+id/scrollViewScrollview"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_51pxv"
+            android:layout_marginTop="@dimen/_44pxv"
+            android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:gravity="center_horizontal"
+                android:id="@+id/linearGroup150"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <FrameLayout android:id="@+id/frameGroup153"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_206pxv"
+                    android:layout_marginEnd="@dimen/_16pxh"
+                    android:layout_marginStart="@dimen/_16pxh" android:layout_width="@dimen/_343pxh">
+                    <ImageView android:id="@+id/imagePromotionImage"
+                        android:layout_gravity="start"
+                        android:layout_height="@dimen/_206pxh"
+                        android:layout_width="match_parent"
+                        android:scaleType="fitXY"
+                        imageRes="@{@drawable/img_promotionimage}" tools:src="@drawable/img_promotionimage"/>
+                    <LinearLayout android:id="@+id/linearGroup151"
+                        android:layout_gravity="start"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_32pxv"
+                        android:layout_marginEnd="@dimen/_24pxh"
+                        android:layout_marginStart="@dimen/_24pxh"
+                        android:layout_marginTop="@dimen/_32pxv"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <TextView android:id="@+id/txtOffer"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:text="@{offerScreenVM.offerScreenModel.txtOffer}"
+                            style="@style/txtPoppinsbold24" tools:text="@string/msg_super_flash_sal"/>
+                        <LinearLayout android:gravity="start"
+                            android:id="@+id/linearPromotionPriod"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_10pxh"
+                            android:layout_marginTop="@dimen/_29pxv"
+                            android:layout_width="match_parent" android:orientation="horizontal">
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:id="@+id/btn08"
+                                android:layout_height="@dimen/_41pxh"
+                                android:layout_width="@dimen/_42pxh"
+                                android:paddingBottom="@dimen/_9pxv"
+                                android:paddingEnd="@dimen/_11pxh"
+                                android:paddingStart="@dimen/_9pxh"
+                                android:paddingTop="@dimen/_8pxv"
+                                android:singleLine="true"
+                                android:text="@string/lbl_08"
+                                android:textAllCaps="false"
+                                style="@style/btnSolidRounded_1" tools:text="@string/lbl_08"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txt"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/_10pxv"
+                                android:layout_marginStart="@dimen/_4pxh"
+                                android:layout_marginTop="@dimen/_10pxv"
+                                android:layout_weight="0.03"
+                                android:layout_width="0dp"
+                                android:singleLine="true"
+                                android:text="@{offerScreenVM.offerScreenModel.txt}"
+                                style="@style/txtPoppinsbold14_1" tools:text="@string/lbl"/>
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:id="@+id/btn34"
+                                android:layout_height="@dimen/_41pxh"
+                                android:layout_marginStart="@dimen/_4pxh"
+                                android:layout_width="@dimen/_42pxh"
+                                android:paddingBottom="@dimen/_9pxv"
+                                android:paddingEnd="@dimen/_11pxh"
+                                android:paddingStart="@dimen/_9pxh"
+                                android:paddingTop="@dimen/_8pxv"
+                                android:singleLine="true"
+                                android:text="@string/lbl_34"
+                                android:textAllCaps="false"
+                                style="@style/btnSolidRounded_1" tools:text="@string/lbl_34"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txt1"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/_10pxv"
+                                android:layout_marginStart="@dimen/_4pxh"
+                                android:layout_marginTop="@dimen/_10pxv"
+                                android:layout_weight="0.03"
+                                android:layout_width="0dp"
+                                android:singleLine="true"
+                                android:text="@{offerScreenVM.offerScreenModel.txt1}"
+                                style="@style/txtPoppinsbold14_1" tools:text="@string/lbl"/>
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:ellipsize="end"
+                                android:gravity="center"
+                                android:id="@+id/btn52"
+                                android:layout_height="@dimen/_41pxh"
+                                android:layout_marginStart="@dimen/_4pxh"
+                                android:layout_width="@dimen/_42pxh"
+                                android:paddingBottom="@dimen/_9pxv"
+                                android:paddingEnd="@dimen/_10pxh"
+                                android:paddingStart="@dimen/_11pxh"
+                                android:paddingTop="@dimen/_8pxv"
+                                android:singleLine="true"
+                                android:text="@string/lbl_52"
+                                android:textAllCaps="false"
+                                style="@style/btnSolidRounded_1" tools:text="@string/lbl_52"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </FrameLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:gravity="center_horizontal"
+                    android:id="@+id/recyclerOfferScreen"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_16pxh"
+                    android:layout_marginStart="@dimen/_16pxh"
+                    android:layout_marginTop="@dimen/_16pxv"
+                    android:layout_width="match_parent"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="2" itemSpace="@{@dimen/_13pxh}"
+                    tools:itemCount="4" tools:listitem="@layout/row_offer_screen1"/>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</layout>

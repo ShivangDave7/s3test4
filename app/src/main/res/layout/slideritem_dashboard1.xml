@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="imageSliderGroup18Model" type="com.isapplication.app.modules.dashboard.data.model.ImageSliderGroup18Model"/>
+    </data>
+    <FrameLayout android:id="@+id/frameGroup133"
+        android:layout_height="match_parent" android:layout_width="match_parent">
+        <ImageView android:id="@+id/imagePromotionImage"
+            android:layout_gravity="start"
+            android:layout_height="@dimen/_206pxh"
+            android:layout_width="match_parent"
+            android:scaleType="fitXY"
+            imageUrl="@{imageSliderGroup18Model.imagePromotionImage}" tools:src="@drawable/img_promotionimage"/>
+        <LinearLayout android:id="@+id/linearGroup129"
+            android:layout_gravity="start"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_32pxv"
+            android:layout_marginEnd="@dimen/_24pxh"
+            android:layout_marginStart="@dimen/_24pxh"
+            android:layout_marginTop="@dimen/_32pxv"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:id="@+id/txtOffer"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@{imageSliderGroup18Model.txtOffer}"
+                style="@style/txtPoppinsbold24" tools:text="@string/msg_super_flash_sal"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearPromotionPriod"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_29pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <androidx.appcompat.widget.AppCompatButton
+                    android:ellipsize="end" android:gravity="center"
+                    android:id="@+id/btn08"
+                    android:layout_height="@dimen/_41pxh"
+                    android:layout_width="@dimen/_42pxh"
+                    android:paddingBottom="@dimen/_9pxv"
+                    android:paddingEnd="@dimen/_11pxh"
+                    android:paddingStart="@dimen/_9pxh"
+                    android:paddingTop="@dimen/_8pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_08"
+                    android:textAllCaps="false"
+                    style="@style/btnSolidRounded_1" tools:text="@string/lbl_08"/>
+                <TextView android:ellipsize="end" android:id="@+id/txt"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_10pxv"
+                    android:layout_marginStart="@dimen/_4pxh"
+                    android:layout_marginTop="@dimen/_10pxv"
+                    android:layout_weight="0.03"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{imageSliderGroup18Model.txt}"
+                    style="@style/txtPoppinsbold14_1" tools:text="@string/lbl"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:ellipsize="end" android:gravity="center"
+                    android:id="@+id/btn34"
+                    android:layout_height="@dimen/_41pxh"
+                    android:layout_marginStart="@dimen/_4pxh"
+                    android:layout_width="@dimen/_42pxh"
+                    android:paddingBottom="@dimen/_9pxv"
+                    android:paddingEnd="@dimen/_11pxh"
+                    android:paddingStart="@dimen/_9pxh"
+                    android:paddingTop="@dimen/_8pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_34"
+                    android:textAllCaps="false"
+                    style="@style/btnSolidRounded_1" tools:text="@string/lbl_34"/>
+                <TextView android:ellipsize="end" android:id="@+id/txt1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_10pxv"
+                    android:layout_marginStart="@dimen/_4pxh"
+                    android:layout_marginTop="@dimen/_10pxv"
+                    android:layout_weight="0.03"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{imageSliderGroup18Model.txt1}"
+                    style="@style/txtPoppinsbold14_1" tools:text="@string/lbl"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:ellipsize="end" android:gravity="center"
+                    android:id="@+id/btn52"
+                    android:layout_height="@dimen/_41pxh"
+                    android:layout_marginStart="@dimen/_4pxh"
+                    android:layout_width="@dimen/_42pxh"
+                    android:paddingBottom="@dimen/_9pxv"
+                    android:paddingEnd="@dimen/_10pxh"
+                    android:paddingStart="@dimen/_11pxh"
+                    android:paddingTop="@dimen/_8pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_52"
+                    android:textAllCaps="false"
+                    style="@style/btnSolidRounded_1" tools:text="@string/lbl_52"/>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</layout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="notificationFeedVM" type="com.isapplication.app.modules.notificationfeed.data.viewmodel.NotificationFeedVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearNotificationFe"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearFeeds"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_330pxv"
+            android:layout_marginTop="@dimen/_26pxv"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarToolbar"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" app:contentInsetStart="0dp">
+                <LinearLayout android:gravity="center_vertical"
+                    android:id="@+id/linearGroup231"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/_282pxh"
+                    android:layout_marginStart="@dimen/_16pxh"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageLefticon"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY" android:src="@drawable/img_lefticon"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtFeed"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_12pxh"
+                        android:layout_weight="0.63"
+                        android:layout_width="0dp"
+                        android:singleLine="true"
+                        android:text="@{notificationFeedVM.notificationFeedModel.txtFeed}"
+                        style="@style/txtPoppinsbold16" tools:text="@string/lbl_feed"/>
+                </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerNotificationFeed"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_28pxv"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_1pxh}" tools:itemCount="3" tools:listitem="@layout/row_notification_feed1"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

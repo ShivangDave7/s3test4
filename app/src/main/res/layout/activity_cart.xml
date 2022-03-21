@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="cartVM" type="com.isapplication.app.modules.cart.data.viewmodel.CartVM"/>
+    </data>
+    <LinearLayout android:gravity="start" android:id="@+id/linearCart"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearGroup345" android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_26pxv"
+            android:layout_weight="1.0"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <androidx.appcompat.widget.Toolbar android:gravity="start"
+                android:id="@+id/toolbarToolbar"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" app:contentInsetStart="0dp">
+                <LinearLayout android:id="@+id/linearGroup342"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/_13pxh"
+                    android:layout_marginStart="@dimen/_16pxh"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtYourCart"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.77"
+                        android:layout_width="0dp"
+                        android:singleLine="true"
+                        android:text="@{cartVM.cartModel.txtYourCart}"
+                        style="@style/txtPoppinsbold16" tools:text="@string/lbl_your_cart"/>
+                    <ImageView android:clickable="true"
+                        android:id="@+id/imageNotificationic"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_marginStart="@dimen/_243pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY" android:src="@drawable/img_notificationic_2"/>
+                </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+            <androidx.recyclerview.widget.RecyclerView
+                android:gravity="center_horizontal"
+                android:id="@+id/recyclerCart"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_15pxh"
+                android:layout_marginStart="@dimen/_15pxh"
+                android:layout_marginTop="@dimen/_24pxv"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_16pxh}" tools:itemCount="2" tools:listitem="@layout/row_cart1"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearGroup343"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_52pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <EditText
+                    android:background="@drawable/rectangle_bg_white_a700_border_blue_50_radius_5"
+                    android:ellipsize="end"
+                    android:hint="@string/msg_enter_cupon_cod"
+                    android:id="@+id/etCoponcodefiel"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16pxh"
+                    android:layout_weight="0.75"
+                    android:layout_width="0dp"
+                    android:paddingBottom="@dimen/_21pxv"
+                    android:paddingStart="@dimen/_16pxh"
+                    android:paddingTop="@dimen/_21pxv"
+                    android:singleLine="true"
+                    android:text="@={cartVM.cartModel.etCoponcodefielValue}"
+                    android:textColorHint="@color/bluegray_300" style="@style/etSolidRoundedOutline"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:ellipsize="end" android:gravity="center"
+                    android:id="@+id/btnApply"
+                    android:layout_height="@dimen/_56pxv"
+                    android:layout_marginEnd="@dimen/_16pxh"
+                    android:layout_width="@dimen/_87pxh"
+                    android:paddingBottom="@dimen/_17pxv"
+                    android:paddingEnd="@dimen/_24pxh"
+                    android:paddingStart="@dimen/_24pxh"
+                    android:paddingTop="@dimen/_17pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_apply"
+                    android:textAllCaps="false"
+                    style="@style/btnSolidRoundedRightCorner" tools:text="@string/lbl_apply"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_horizontal"
+                android:id="@+id/linearTotalPricedet"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_15pxh"
+                android:layout_marginStart="@dimen/_15pxh"
+                android:layout_marginTop="@dimen/_16pxv"
+                android:layout_width="match_parent"
+                android:orientation="vertical" style="@style/groupStylewhite_A700cornerRadius">
+                <LinearLayout android:id="@+id/linearItemprice"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_16pxh"
+                    android:layout_marginStart="@dimen/_16pxh"
+                    android:layout_marginTop="@dimen/_16pxv"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtItems"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.54"
+                        android:layout_width="0dp"
+                        android:singleLine="true"
+                        android:text="@{cartVM.cartModel.txtItems}"
+                        style="@style/txtPoppinsregular12" tools:text="@string/lbl_items_3"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtPrice"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_200pxh"
+                        android:layout_weight="0.46"
+                        android:layout_width="0dp"
+                        android:singleLine="true"
+                        android:text="@{cartVM.cartModel.txtPrice}"
+                        style="@style/txtPoppinsregular12_1" tools:text="@string/lbl_598_86"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/linearShoppingprice"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_16pxh"
+                    android:layout_marginStart="@dimen/_16pxh"
+                    android:layout_marginTop="@dimen/_12pxv"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtShipping"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.57"
+                        android:layout_width="0dp"
+                        android:singleLine="true"
+                        android:text="@{cartVM.cartModel.txtShipping}"
+                        style="@style/txtPoppinsregular12" tools:text="@string/lbl_shipping"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtPrice1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_210pxh"
+                        android:layout_weight="0.43"
+                        android:layout_width="0dp"
+                        android:singleLine="true"
+                        android:text="@{cartVM.cartModel.txtPrice1}"
+                        style="@style/txtPoppinsregular12_1" tools:text="@string/lbl_40_00"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/linearImportcharges"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_16pxh"
+                    android:layout_marginStart="@dimen/_16pxh"
+                    android:layout_marginTop="@dimen/_12pxv"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtImportcharges"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.68"
+                        android:layout_width="0dp"
+                        android:singleLine="true"
+                        android:text="@{cartVM.cartModel.txtImportcharges}"
+                        style="@style/txtPoppinsregular12" tools:text="@string/lbl_import_charges"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtPrice2"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_163pxh"
+                        android:layout_weight="0.32"
+                        android:layout_width="0dp"
+                        android:singleLine="true"
+                        android:text="@{cartVM.cartModel.txtPrice2}"
+                        style="@style/txtPoppinsregular12_1" tools:text="@string/lbl_128_00"/>
+                </LinearLayout>
+                <View android:background="@color/blue_50"
+                    android:id="@+id/lineLine39"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_1pxv"
+                    android:layout_marginEnd="@dimen/_16pxh"
+                    android:layout_marginStart="@dimen/_16pxh"
+                    android:layout_marginTop="@dimen/_12pxv" android:layout_width="@dimen/_311pxh"/>
+                <LinearLayout android:id="@+id/linearTotalparice"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_16pxv"
+                    android:layout_marginEnd="@dimen/_16pxh"
+                    android:layout_marginStart="@dimen/_16pxh"
+                    android:layout_marginTop="@dimen/_11pxv"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtTotalPrice"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.57"
+                        android:layout_width="0dp"
+                        android:singleLine="true"
+                        android:text="@{cartVM.cartModel.txtTotalPrice}"
+                        style="@style/txtPoppinsbold12_2" tools:text="@string/lbl_total_price"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtPrice3"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_188pxh"
+                        android:layout_weight="0.43"
+                        android:layout_width="0dp"
+                        android:singleLine="true"
+                        android:text="@{cartVM.cartModel.txtPrice3}"
+                        style="@style/txtPoppinsbold12" tools:text="@string/lbl_766_86"/>
+                </LinearLayout>
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:clickable="true" android:ellipsize="end"
+                android:gravity="center" android:id="@+id/btnCheckOut"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_15pxh"
+                android:layout_marginStart="@dimen/_15pxh"
+                android:layout_marginTop="@dimen/_16pxv"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/_16pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_16pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_check_out"
+                android:textAllCaps="false"
+                style="@style/btnSolidRounded" tools:text="@string/lbl_check_out"/>
+        </LinearLayout>
+        <FrameLayout android:id="@+id/frameBottomBar"
+            android:layout_height="wrap_content" android:layout_width="match_parent">
+            <LinearLayout android:id="@+id/linearGroup62"
+                android:layout_gravity="start"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/_24pxv"
+                android:layout_marginTop="@dimen/_24pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <LinearLayout android:gravity="center_horizontal"
+                    android:id="@+id/linearGroup57"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:layout_width="0dp" android:orientation="vertical">
+                    <ImageView android:id="@+id/imageHomeicon"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_marginEnd="@dimen/_25pxh"
+                        android:layout_marginStart="@dimen/_26pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY" android:src="@drawable/img_homeicon_1"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="start"
+                        android:id="@+id/txtHome"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4pxv"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{cartVM.cartModel.txtHome}"
+                        style="@style/txtPoppinsregular10" tools:text="@string/lbl_home"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_horizontal"
+                    android:id="@+id/linearGroup58"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:layout_width="0dp" android:orientation="vertical">
+                    <ImageView android:id="@+id/imageSearchicon"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_marginEnd="@dimen/_25pxh"
+                        android:layout_marginStart="@dimen/_26pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY" android:src="@drawable/img_searchicon_1"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="start"
+                        android:id="@+id/txtExplore"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4pxv"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{cartVM.cartModel.txtExplore}"
+                        style="@style/txtPoppinsregular10" tools:text="@string/lbl_explore"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_horizontal"
+                    android:id="@+id/linearGroup59"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:layout_width="0dp" android:orientation="vertical">
+                    <ImageView android:id="@+id/imageCarticon"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_marginEnd="@dimen/_25pxh"
+                        android:layout_marginStart="@dimen/_26pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY" android:src="@drawable/img_carticon_2"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="start"
+                        android:id="@+id/txtCart"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4pxv"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{cartVM.cartModel.txtCart}"
+                        style="@style/txtPoppinsbold10_1" tools:text="@string/lbl_cart"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_horizontal"
+                    android:id="@+id/linearGroup60"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:layout_width="0dp" android:orientation="vertical">
+                    <ImageView android:id="@+id/imageOffericon"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_marginEnd="@dimen/_25pxh"
+                        android:layout_marginStart="@dimen/_26pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY" android:src="@drawable/img_offericon_2"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="start"
+                        android:id="@+id/txtOffer"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4pxv"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{cartVM.cartModel.txtOffer}"
+                        style="@style/txtPoppinsregular10" tools:text="@string/lbl_offer"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_horizontal"
+                    android:id="@+id/linearGroup61"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:layout_width="0dp" android:orientation="vertical">
+                    <ImageView android:id="@+id/imageUsericon"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_marginEnd="@dimen/_25pxh"
+                        android:layout_marginStart="@dimen/_26pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY" android:src="@drawable/img_usericon_3"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="start"
+                        android:id="@+id/txtAccount"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4pxv"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{cartVM.cartModel.txtAccount}"
+                        style="@style/txtPoppinsregular10" tools:text="@string/lbl_account"/>
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</layout>

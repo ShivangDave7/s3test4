@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="imageSliderGroup29Model" type="com.isapplication.app.modules.productdetail.data.model.ImageSliderGroup29Model"/>
+    </data>
+    <ImageView android:id="@+id/imageProductImage"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" android:scaleType="fitXY"
+        imageUrl="@{imageSliderGroup29Model.imageProductImage}" tools:src="@drawable/img_productimage_9"/>
+</layout>
