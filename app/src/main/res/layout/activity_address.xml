@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="addressVM" type="com.isapplication.app.modules.address.data.viewmodel.AddressVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearAddress"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearAddresses"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_26pxv"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarToolbar"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" app:contentInsetStart="0dp">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearGroup491"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/_235pxh"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageLefticon"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY" android:src="@drawable/img_lefticon"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtAddress"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_12pxh"
+                        android:layout_weight="0.75"
+                        android:layout_width="0dp"
+                        android:singleLine="true"
+                        android:text="@{addressVM.addressModel.txtAddress}"
+                        style="@style/txtPoppinsbold16" tools:text="@string/lbl_address"/>
+                </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerAddress"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_34pxv"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_18pxh}" tools:itemCount="2" tools:listitem="@layout/row_address1"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:ellipsize="end" android:gravity="center"
+                android:id="@+id/btnAddAddress"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_143pxv"
+                android:layout_width="match_parent"
+                android:paddingHorizontal="@dimen/_16pxh"
+                android:paddingVertical="@dimen/_16pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_add_address"
+                android:textAllCaps="false"
+                style="@style/btnSolidRounded" tools:text="@string/lbl_add_address"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

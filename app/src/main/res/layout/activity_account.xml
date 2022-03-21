@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="accountVM" type="com.isapplication.app.modules.account.data.viewmodel.AccountVM"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearAccount"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearOptions" android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_26pxv"
+            android:layout_weight="1.0"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbarToolbar"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" app:contentInsetStart="0dp">
+                <LinearLayout android:id="@+id/linearGroup382"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/_13pxh"
+                    android:layout_marginStart="@dimen/_16pxh"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtAccount"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.74"
+                        android:layout_width="0dp"
+                        android:singleLine="true"
+                        android:text="@{accountVM.accountModel.txtAccount}"
+                        style="@style/txtPoppinsbold16" tools:text="@string/lbl_account"/>
+                    <ImageView android:clickable="true"
+                        android:id="@+id/imageNotificationic"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_marginStart="@dimen/_252pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY" android:src="@drawable/img_notificationic_2"/>
+                </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+            <LinearLayout android:clickable="true"
+                android:gravity="start" android:id="@+id/linearGroup378"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_28pxv"
+                android:layout_width="match_parent"
+                android:orientation="horizontal" style="@style/groupStylewhite_A700">
+                <ImageView android:id="@+id/imageUsericon"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_marginBottom="@dimen/_16pxv"
+                    android:layout_marginStart="@dimen/_16pxh"
+                    android:layout_marginTop="@dimen/_16pxv"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY" android:src="@drawable/img_usericon_4"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtProfile"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_19pxv"
+                    android:layout_marginEnd="@dimen/_276pxh"
+                    android:layout_marginStart="@dimen/_16pxh"
+                    android:layout_marginTop="@dimen/_19pxv"
+                    android:layout_weight="0.64"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{accountVM.accountModel.txtProfile}"
+                    style="@style/txtPoppinsbold12_2" tools:text="@string/lbl_profile"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearGroup379"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal" style="@style/groupStyleblue_50">
+                <ImageView android:id="@+id/imageBagicon"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_marginBottom="@dimen/_16pxv"
+                    android:layout_marginStart="@dimen/_16pxh"
+                    android:layout_marginTop="@dimen/_16pxv"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY" android:src="@drawable/img_bagicon"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtOrder"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_19pxv"
+                    android:layout_marginEnd="@dimen/_281pxh"
+                    android:layout_marginStart="@dimen/_16pxh"
+                    android:layout_marginTop="@dimen/_19pxv"
+                    android:layout_weight="0.61"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{accountVM.accountModel.txtOrder}"
+                    style="@style/txtPoppinsbold12_2" tools:text="@string/lbl_order"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearGroup380"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal" style="@style/groupStylewhite_A700">
+                <ImageView android:id="@+id/imageLocationicon"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_marginBottom="@dimen/_16pxv"
+                    android:layout_marginStart="@dimen/_16pxh"
+                    android:layout_marginTop="@dimen/_16pxv"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY" android:src="@drawable/img_locationicon"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtAddress"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_19pxv"
+                    android:layout_marginEnd="@dimen/_264pxh"
+                    android:layout_marginStart="@dimen/_16pxh"
+                    android:layout_marginTop="@dimen/_19pxv"
+                    android:layout_weight="0.7"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{accountVM.accountModel.txtAddress}"
+                    style="@style/txtPoppinsbold12_2" tools:text="@string/lbl_address"/>
+            </LinearLayout>
+            <LinearLayout android:clickable="true"
+                android:gravity="start" android:id="@+id/linearGroup381"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal" style="@style/groupStylewhite_A700">
+                <ImageView android:id="@+id/imageCreditCardico"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_marginBottom="@dimen/_16pxv"
+                    android:layout_marginStart="@dimen/_16pxh"
+                    android:layout_marginTop="@dimen/_16pxv"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY" android:src="@drawable/img_creditcardico"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPayment"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_19pxv"
+                    android:layout_marginEnd="@dimen/_259pxh"
+                    android:layout_marginStart="@dimen/_16pxh"
+                    android:layout_marginTop="@dimen/_19pxv"
+                    android:layout_weight="0.71"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{accountVM.accountModel.txtPayment}"
+                    style="@style/txtPoppinsbold12_2" tools:text="@string/lbl_payment"/>
+            </LinearLayout>
+        </LinearLayout>
+        <FrameLayout android:id="@+id/frameBottomBar"
+            android:layout_height="wrap_content" android:layout_width="match_parent">
+            <LinearLayout android:id="@+id/linearGroup84"
+                android:layout_gravity="start"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/_24pxv"
+                android:layout_marginTop="@dimen/_24pxv"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <LinearLayout android:gravity="center_horizontal"
+                    android:id="@+id/linearGroup79"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:layout_width="0dp" android:orientation="vertical">
+                    <ImageView android:id="@+id/imageHomeicon"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_marginEnd="@dimen/_25pxh"
+                        android:layout_marginStart="@dimen/_26pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY" android:src="@drawable/img_homeicon_1"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="start"
+                        android:id="@+id/txtHome"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4pxv"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{accountVM.accountModel.txtHome}"
+                        style="@style/txtPoppinsregular10" tools:text="@string/lbl_home"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_horizontal"
+                    android:id="@+id/linearGroup80"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:layout_width="0dp" android:orientation="vertical">
+                    <ImageView android:id="@+id/imageSearchicon"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_marginEnd="@dimen/_25pxh"
+                        android:layout_marginStart="@dimen/_26pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY" android:src="@drawable/img_searchicon_1"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="start"
+                        android:id="@+id/txtExplore"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4pxv"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{accountVM.accountModel.txtExplore}"
+                        style="@style/txtPoppinsregular10" tools:text="@string/lbl_explore"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_horizontal"
+                    android:id="@+id/linearGroup81"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:layout_width="0dp" android:orientation="vertical">
+                    <ImageView android:id="@+id/imageCarticon"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_marginEnd="@dimen/_25pxh"
+                        android:layout_marginStart="@dimen/_26pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY" android:src="@drawable/img_carticon_1"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="start"
+                        android:id="@+id/txtCart"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4pxv"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{accountVM.accountModel.txtCart}"
+                        style="@style/txtPoppinsregular10" tools:text="@string/lbl_cart"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_horizontal"
+                    android:id="@+id/linearGroup82"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:layout_width="0dp" android:orientation="vertical">
+                    <ImageView android:id="@+id/imageOffericon"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_marginEnd="@dimen/_25pxh"
+                        android:layout_marginStart="@dimen/_26pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY" android:src="@drawable/img_offericon_2"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="start"
+                        android:id="@+id/txtOffer"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4pxv"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{accountVM.accountModel.txtOffer}"
+                        style="@style/txtPoppinsregular10" tools:text="@string/lbl_offer"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="center_horizontal"
+                    android:id="@+id/linearGroup83"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:layout_width="0dp" android:orientation="vertical">
+                    <ImageView android:id="@+id/imageUsericon1"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_marginEnd="@dimen/_25pxh"
+                        android:layout_marginStart="@dimen/_26pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY" android:src="@drawable/img_usericon_5"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="start"
+                        android:id="@+id/txtAccount1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4pxv"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{accountVM.accountModel.txtAccount1}"
+                        style="@style/txtPoppinsbold10_1" tools:text="@string/lbl_account"/>
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="imageSliderGroup67Model" type="com.isapplication.app.modules.choosecreditordebitcard.data.model.ImageSliderGroup67Model"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearGroup363"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylelight_blue_A200cornerRadius">
+        <ImageView android:id="@+id/imageCreditcardlog"
+            android:layout_height="@dimen/_22pxh"
+            android:layout_marginEnd="@dimen/_24pxh"
+            android:layout_marginStart="@dimen/_24pxh"
+            android:layout_marginTop="@dimen/_24pxv"
+            android:layout_width="@dimen/_36pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_creditcardlog" imageUrl="@{imageSliderGroup67Model.imageCreditcardlog}"/>
+        <TextView android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:id="@+id/txtLanguage"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_21pxh"
+            android:layout_marginStart="@dimen/_21pxh"
+            android:layout_marginTop="@dimen/_31pxv"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@{imageSliderGroup67Model.txtLanguage}"
+            style="@style/txtPoppinsbold24" tools:text="@string/msg_6326_9124"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearGroup359"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_17pxv"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:alpha="0.5" android:ellipsize="end"
+                android:id="@+id/txtCARDHOLDER"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_21pxh"
+                android:layout_marginTop="@dimen/_2pxv"
+                android:layout_weight="0.55" android:layout_width="0dp"
+                android:singleLine="true"
+                android:text="@{imageSliderGroup67Model.txtCARDHOLDER}"
+                style="@style/txtPoppinsregular10_2" tools:text="@string/lbl_card_holder"/>
+            <TextView android:alpha="0.5" android:ellipsize="end"
+                android:id="@+id/txtCARDSAVE"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_2pxv"
+                android:layout_marginEnd="@dimen/_153pxh"
+                android:layout_marginStart="@dimen/_37pxh"
+                android:layout_weight="0.45" android:layout_width="0dp"
+                android:singleLine="true"
+                android:text="@{imageSliderGroup67Model.txtCARDSAVE}"
+                style="@style/txtPoppinsregular10_2" tools:text="@string/lbl_card_save"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearGroup360"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_16pxv"
+            android:layout_marginTop="@dimen/_10pxv"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtDominicOvo"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_2pxv"
+                android:layout_marginStart="@dimen/_21pxh"
+                android:layout_weight="0.69" android:layout_width="0dp"
+                android:singleLine="true"
+                android:text="@{imageSliderGroup67Model.txtDominicOvo}"
+                style="@style/txtPoppinsbold10_3" tools:text="@string/lbl_dominic_ovo"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtDebitcardexpi"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_175pxh"
+                android:layout_marginStart="@dimen/_44pxh"
+                android:layout_marginTop="@dimen/_2pxv"
+                android:layout_weight="0.31" android:layout_width="0dp"
+                android:singleLine="true"
+                android:text="@{imageSliderGroup67Model.txtDebitcardexpi}"
+                style="@style/txtPoppinsbold10_3" tools:text="@string/lbl_06_24"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

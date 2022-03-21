@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="reviewProductVM" type="com.isapplication.app.modules.reviewproduct.data.viewmodel.ReviewProductVM"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearGroup218"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_8pxv"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarToolbar"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_18pxv"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearGroup200"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/_243pxh"
+                android:layout_marginStart="@dimen/_19pxh"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageLefticon"
+                    android:layout_height="@dimen/_24pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY" android:src="@drawable/img_lefticon"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtReviewCounter"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12pxh"
+                    android:layout_weight="0.76"
+                    android:layout_width="0dp" android:singleLine="true"
+                    android:text="@{reviewProductVM.reviewProductModel.txtReviewCounter}"
+                    style="@style/txtPoppinsbold16" tools:text="@string/lbl_5_review2"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <androidx.core.widget.NestedScrollView
+            android:clipToPadding="false" android:fillViewport="true"
+            android:id="@+id/scrollViewScrollview"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_20pxv"
+            android:layout_marginTop="@dimen/_34pxv"
+            android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearReview"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_13pxh"
+                android:layout_marginStart="@dimen/_19pxh"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerReviewProduct"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    itemSpace="@{@dimen/_32pxh}" tools:itemCount="5" tools:listitem="@layout/row_review_product1"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:clickable="true" android:ellipsize="end"
+                    android:gravity="center"
+                    android:id="@+id/btnWriteReview"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_71pxv"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="@dimen/_16pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingStart="@dimen/_30pxh"
+                    android:paddingTop="@dimen/_16pxv"
+                    android:singleLine="true"
+                    android:text="@string/lbl_write_review"
+                    android:textAllCaps="false"
+                    style="@style/btnSolidRounded" tools:text="@string/lbl_write_review"/>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</layout>

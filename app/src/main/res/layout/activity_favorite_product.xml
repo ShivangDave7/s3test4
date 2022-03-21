@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="favoriteProductVM" type="com.isapplication.app.modules.favoriteproduct.data.viewmodel.FavoriteProductVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearFavoriteProduc"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearGroup166"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_118pxv"
+            android:layout_marginTop="@dimen/_26pxv"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <androidx.appcompat.widget.Toolbar android:gravity="start"
+                android:id="@+id/toolbarToolbar"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" app:contentInsetStart="0dp">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearGroup163"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/_179pxh"
+                    android:layout_marginStart="@dimen/_16pxh"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageLefticon"
+                        android:layout_height="@dimen/_24pxh"
+                        android:layout_width="@dimen/_24pxh"
+                        android:scaleType="fitXY" android:src="@drawable/img_lefticon"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtFavoriteProduc"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_12pxh"
+                        android:layout_weight="0.86"
+                        android:layout_width="0dp"
+                        android:singleLine="true"
+                        android:text="@{favoriteProductVM.favoriteProductModel.txtFavoriteProduc}"
+                        style="@style/txtPoppinsbold16" tools:text="@string/msg_favorite_produc"/>
+                </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+            <androidx.recyclerview.widget.RecyclerView
+                android:gravity="center_horizontal"
+                android:id="@+id/recyclerFavoriteProduct"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_16pxh"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_24pxv"
+                android:layout_width="match_parent"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="2" itemSpace="@{@dimen/_13pxh}"
+                tools:itemCount="4" tools:listitem="@layout/row_favorite_product1"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>
