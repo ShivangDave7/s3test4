@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="productDetail2RowModel" type="com.isapplication.app.modules.productdetail.data.model.ProductDetail2RowModel"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearProduct"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="vertical" style="@style/groupStylewhite_A700cornerRadius">
+        <ImageView android:id="@+id/imageProductimage"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_109pxh"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_16pxv"
+            android:layout_width="@dimen/_109pxh"
+            android:scaleType="fitXY"
+            imageRes="@{@drawable/img_productimage}" tools:src="@drawable/img_productimage"/>
+        <TextView android:id="@+id/txtFSNikeAirM"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_8pxv"
+            android:layout_width="match_parent"
+            android:text="@{productDetail2RowModel.txtFSNikeAirM}"
+            style="@style/txtPoppinsbold12_2" tools:text="@string/msg_fs_nike_air_m"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtPrice"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_8pxv"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{productDetail2RowModel.txtPrice}"
+            style="@style/txtPoppinsbold12" tools:text="@string/lbl_299_43"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearDiscount"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_16pxv"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_8pxv"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtPrice1"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.42" android:layout_width="0dp"
+                android:singleLine="true"
+                android:text="@{productDetail2RowModel.txtPrice1}"
+                style="@style/txtPoppinsregular10" tools:text="@string/lbl_534_33"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtOffer"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8pxh"
+                android:layout_weight="0.58" android:layout_width="0dp"
+                android:singleLine="true"
+                android:text="@{productDetail2RowModel.txtOffer}"
+                style="@style/txtPoppinsbold10" tools:text="@string/lbl_24_off"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

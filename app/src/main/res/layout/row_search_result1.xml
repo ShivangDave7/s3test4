@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="searchResult1RowModel" type="com.isapplication.app.modules.searchresult.data.model.SearchResult1RowModel"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearProduct"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700cornerRadius">
+        <ImageView android:id="@+id/imageProductimage"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_133pxh"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_16pxv"
+            android:layout_width="@dimen/_133pxh"
+            android:scaleType="fitXY"
+            imageRes="@{@drawable/img_productimage_8}" tools:src="@drawable/img_productimage_8"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearProductdetail"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_16pxv"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_8pxv"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearProductname"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:id="@+id/txtNikeAirMaxRe"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@{searchResult1RowModel.txtNikeAirMaxRe}"
+                    style="@style/txtPoppinsbold12_2" tools:text="@string/msg_nike_air_max_27"/>
+                <androidx.appcompat.widget.AppCompatRatingBar
+                    android:id="@+id/ratingBarRatingbar"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:layout_marginTop="@dimen/_4pxv"
+                    android:layout_width="wrap_content"
+                    android:numStars="5"
+                    android:progressBackgroundTint="@color/blue_50"
+                    android:progressTint="@color/yellow_700"
+                    android:rating="4" style="@style/Widget.AppCompat.RatingBar.Small"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearPricedetails"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_16pxv"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPrice"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{searchResult1RowModel.txtPrice}"
+                    style="@style/txtPoppinsbold12" tools:text="@string/lbl_299_43"/>
+                <LinearLayout android:id="@+id/linearDiscounts"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4pxv"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtPrice1"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:layout_width="0dp"
+                        android:singleLine="true"
+                        android:text="@{searchResult1RowModel.txtPrice1}"
+                        style="@style/txtPoppinsregular10" tools:text="@string/lbl_534_33"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtOffer"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_8pxh"
+                        android:layout_weight="0.5"
+                        android:layout_width="0dp"
+                        android:singleLine="true"
+                        android:text="@{searchResult1RowModel.txtOffer}"
+                        style="@style/txtPoppinsbold10" tools:text="@string/lbl_24_off"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

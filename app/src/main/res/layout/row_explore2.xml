@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="explore2RowModel" type="com.isapplication.app.modules.explore.data.model.Explore2RowModel"/>
+    </data>
+    <LinearLayout android:gravity="start" android:id="@+id/linearDress"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <ImageView android:id="@+id/imageDressIcon"
+            android:layout_height="@dimen/_70pxh"
+            android:layout_width="@dimen/_70pxh"
+            android:scaleType="fitXY" android:src="@drawable/img_dressicon"/>
+        <TextView android:id="@+id/txtDress"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8pxv"
+            android:layout_width="match_parent"
+            android:text="@{explore2RowModel.txtDress}"
+            style="@style/txtPoppinsregular10" tools:text="@string/lbl_dress"/>
+    </LinearLayout>
+</layout>

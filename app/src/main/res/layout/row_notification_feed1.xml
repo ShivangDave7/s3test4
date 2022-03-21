@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="notificationFeed1RowModel" type="com.isapplication.app.modules.notificationfeed.data.model.NotificationFeed1RowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearFeeditem"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal" style="@style/groupStylewhite_A700">
+        <ImageView android:id="@+id/imageProductimage"
+            android:layout_height="@dimen/_48pxh"
+            android:layout_marginBottom="@dimen/_56pxv"
+            android:layout_marginStart="@dimen/_16pxh"
+            android:layout_marginTop="@dimen/_16pxv"
+            android:layout_width="@dimen/_48pxh"
+            android:scaleType="fitXY" android:src="@drawable/img_productimage_10"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearFeeddetails"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_16pxv"
+            android:layout_marginEnd="@dimen/_16pxh"
+            android:layout_marginStart="@dimen/_12pxh"
+            android:layout_marginTop="@dimen/_16pxv"
+            android:layout_weight="0.85" android:layout_width="0dp" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtNewProduct"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{notificationFeed1RowModel.txtNewProduct}"
+                style="@style/txtPoppinsbold14_2" tools:text="@string/lbl_new_product"/>
+            <TextView android:id="@+id/txtNikeAirZoomP"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4pxv"
+                android:layout_width="match_parent"
+                android:text="@{notificationFeed1RowModel.txtNikeAirZoomP}"
+                style="@style/txtPoppinsregular12" tools:text="@string/msg_nike_air_zoom_p2"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtTime"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4pxv"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{notificationFeed1RowModel.txtTime}"
+                style="@style/txtPoppinsregular10_1" tools:text="@string/msg_june_3_2015_5"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

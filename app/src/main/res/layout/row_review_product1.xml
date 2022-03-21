@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="reviewProduct1RowModel" type="com.isapplication.app.modules.reviewproduct.data.model.ReviewProduct1RowModel"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearReiview"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearGroup202"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <ImageView android:id="@+id/imageProfilePicture"
+                android:layout_height="@dimen/_48pxh"
+                android:layout_width="@dimen/_48pxh"
+                android:scaleType="fitXY" circular="@{true}"
+                imageRes="@{@drawable/img_profilepicture}" tools:src="@drawable/img_profilepicture"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearGroup201"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_4pxv"
+                android:layout_marginEnd="@dimen/_157pxh"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_3pxv"
+                android:layout_weight="0.7" android:layout_width="0dp" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtJamesLawson"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{reviewProduct1RowModel.txtJamesLawson}"
+                    style="@style/txtPoppinsbold14_2" tools:text="@string/lbl_james_lawson"/>
+                <androidx.appcompat.widget.AppCompatRatingBar
+                    android:id="@+id/ratingBarRatingbar"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:layout_marginTop="@dimen/_4pxv"
+                    android:layout_width="wrap_content"
+                    android:numStars="5"
+                    android:progressTint="@color/yellow_700"
+                    android:rating="5" style="@style/Widget.AppCompat.RatingBar.Small"/>
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:id="@+id/txtDescription"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16pxv"
+            android:layout_width="match_parent"
+            android:text="@{reviewProduct1RowModel.txtDescription}"
+            style="@style/txtPoppinsregular12" tools:text="@string/msg_air_max_are_alw"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtDate"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16pxv"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@{reviewProduct1RowModel.txtDate}"
+            style="@style/txtPoppinsregular10" tools:text="@string/msg_december_10_20"/>
+    </LinearLayout>
+</layout>
